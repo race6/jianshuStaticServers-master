@@ -127,7 +127,7 @@ function getArticle(currentPage){
             if (data.code == 100&&data.message=="获取成功") {
                 let articleList = data.extend.list;
                 let ariticle ="";
-                currentLogUser =
+                currentLogUser =data.extend.currentLogUser;
 
                 $.each(articleList,function (index,ele) {
                         let time = getLocalTime(ele.timeStamp);
